@@ -1,0 +1,65 @@
+services:
+  - type: web
+    name: emart-frontend
+    env: docker
+    repo: https://github.com/albint565/emart
+    rootDir: frontend-react
+    plan: free
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - frontend-react/**
+
+  - type: web
+    name: emart-api
+    env: docker
+    repo: https://github.com/albint565/emart
+    rootDir: api-gateway-nodejs
+    plan: free
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - api-gateway-nodejs/**
+
+  - type: web
+    name: emart-orderprocessor
+    env: docker
+    repo: https://github.com/albint565/emart
+    rootDir: order-processor-python
+    plan: free
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - order-processor-python/**
+
+  - type: web
+    name: emart-compliance
+    env: docker
+    repo: https://github.com/albint565/emart
+    rootDir: compliance-service-dotnet
+    plan: free
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - compliance-service-dotnet/**
+
+  - type: web
+    name: emart-ledger
+    env: docker
+    repo: https://github.com/albint565/emart
+    rootDir: ledger-service-java
+    plan: free
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - ledger-service-java/**
