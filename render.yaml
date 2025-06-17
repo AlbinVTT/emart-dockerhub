@@ -2,7 +2,7 @@ services:
   - type: web
     name: emart-frontend
     env: docker
-    repo: https://github.com/albint565/emart
+    repo: https://github.com/albint565/emart-dockerhub
     rootDir: frontend-react
     plan: free
     dockerContext: .
@@ -15,7 +15,7 @@ services:
   - type: web
     name: emart-api
     env: docker
-    repo: https://github.com/albint565/emart
+    repo: https://github.com/albint565/emart-dockerhub
     rootDir: api-gateway-nodejs
     plan: free
     dockerContext: .
@@ -28,7 +28,7 @@ services:
   - type: web
     name: emart-orderprocessor
     env: docker
-    repo: https://github.com/albint565/emart
+    repo: https://github.com/albint565/emart-dockerhub
     rootDir: order-processor-python
     plan: free
     dockerContext: .
@@ -41,7 +41,7 @@ services:
   - type: web
     name: emart-compliance
     env: docker
-    repo: https://github.com/albint565/emart
+    repo: https://github.com/albint565/emart-dockerhub
     rootDir: compliance-service-dotnet
     plan: free
     dockerContext: .
@@ -54,7 +54,7 @@ services:
   - type: web
     name: emart-ledger
     env: docker
-    repo: https://github.com/albint565/emart
+    repo: https://github.com/albint565/emart-dockerhub
     rootDir: ledger-service-java
     plan: free
     dockerContext: .
